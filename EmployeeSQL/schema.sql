@@ -1,11 +1,11 @@
 ﻿CREATE TABLE IF NOT EXISTS departments(
 	dept_no CHAR(4) PRIMARY KEY,
-	dept_name VARCHAR NOT NULL UNIQUE
+	dept_name VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS titles(
 	title_id CHAR(5) PRIMARY KEY,
-	title VARCHAR NOT NULL UNIQUE
+	title VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS employees(
@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS employees(
 	emp_title_id CHAR(5),
 		FOREIGN KEY(emp_title_id) REFERENCES titles(title_id),
 	birth_date DATE NOT NULL,
-	first_name VARCHAR NOT NULL,
-	last_name VARCHAR NOT NULL,
+	first_name VARCHAR(255) NOT NULL,
+	last_name VARCHAR(255) NOT NULL,
 	sex CHAR(1) NOT NULL,
 	hire_date DATE NOT NULL
 );
