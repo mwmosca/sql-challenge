@@ -1,7 +1,7 @@
 departments
 -
 dept_no CHAR(4) PK
-dept_name VARCHAR
+dept_name VARCHAR(255)
 
 dept_emp
 -
@@ -18,8 +18,8 @@ employees
 emp_no INT PK
 emp_title_id CHAR(5) FK >- titles.title_id
 birth_date DATE
-first_name VARCHAR
-last_name VARCHAR
+first_name VARCHAR(255)
+last_name VARCHAR(255)
 sex CHAR(1)
 hire_date DATE
 
@@ -31,4 +31,4 @@ salary INT
 titles
 -
 title_id CHAR(5) PK
-title VARCHAR
+title VARCHAR(255)
